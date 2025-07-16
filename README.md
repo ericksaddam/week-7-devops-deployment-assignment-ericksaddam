@@ -114,8 +114,8 @@ The assignment includes templates for setting up GitHub Actions workflows:
 - **Backend URL:** [Add your Render backend URL here]
 - **Frontend URL:** [Add your Vercel frontend URL here]
 - **CI/CD Screenshots:**
-  - ![CI/CD Screenshot 1](./Screenshot-from-2025-07-14-10-21-11.png)
-  - ![CI/CD Screenshot 2](./Screenshot-from-2025-07-14-10-23-13.png)
+  - ![CI/CD Pipeline Example](./Screenshot%20from%202025-07-16%2012-23-06.png)
+
 
 ### Maintenance & Monitoring
 - Set up health check endpoints in your backend (e.g., `/api/health`).
