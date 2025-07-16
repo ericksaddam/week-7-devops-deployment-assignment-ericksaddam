@@ -1,0 +1,44 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:4.4
+        ports:
+          - 27017:27017
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './server/package.json'
+      - name: Install backend dependencies
+        run: |
+          cd server
+          npm ci
+      - name: Run backend linting
+        run: |
+          cd server
+          npm run lint
+      - name: Run backend tests
+        run: |
+          cd server
+          npm test
+        env:
+          CI: true
+          MONGODB_URI: mongodb://localhost:27017/test
+          JWT_SECRET: test_secret_for_ci
+      - name: Build backend
+        run: |
+          cd server
+          npm run build --if-present

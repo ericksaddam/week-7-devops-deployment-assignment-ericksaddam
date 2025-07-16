@@ -12,6 +12,10 @@ You will:
 4. Set up CI/CD pipelines with GitHub Actions
 5. Implement monitoring and maintenance strategies
 
+## Live Demo
+- **Frontend:** [https://week-7-devops-deployment-assignment-ericksaddam-7atxqzngs.vercel.app/](https://week-7-devops-deployment-assignment-ericksaddam-7atxqzngs.vercel.app/)
+- **Backend:** [https://week-7-devops-deployment-assignment-1ubj.onrender.com](https://week-7-devops-deployment-assignment-1ubj.onrender.com)
+
 ## Getting Started
 
 1. Accept the GitHub Classroom assignment invitation
